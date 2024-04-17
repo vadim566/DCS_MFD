@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Screen Streaming with MFD Buttons</title>
+    <style>
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .stream-container {
+            position: relative;
+            display: inline-block;
+        }
+        .button {
+            position: absolute;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            padding: 10px 20px;
+        }
+        /* Button positions */
+        .button-top {
+            top: -50px;
+        }
+        .button-bottom {
+            bottom: -50px;
+        }
+        .button-left {
+            left: -50px;
+        }
+        .button-right {
+            right: -50px;
+        }
+        /* Example button positions */
+        .button-top-left {
+            top: -50px;
+            left: -50px;
+        }
+        .button-top-right {
+            top: -50px;
+            right: -50px;
+        }
+        .button-bottom-left {
+            bottom: -50px;
+            left: -50px;
+        }
+        .button-bottom-right {
+            bottom: -50px;
+            right: -50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Screen Streaming with MFD Buttons</h1>
+    <div class="container">
+        <div class="stream-container">
+            <img src="{{ url_for('video_feed') }}" width="800" height="600">
+        </div>
+        <!-- Buttons at the top -->
+        <!-- <button class="button button-top button-top-left">Button 1</button> -->
+        <button id='button1' class="button button-top" style="left: 10%">1</button>
+        <button class="button button-top" style="left: 30%">2</button>
+        <button class="button button-top" style="left: 50%">3</button>
+        <button class="button button-top" style="left: 70%">4</button>
+        <button class="button button-top" style="left: 90%">5</button>
+        <!-- <button class="button button-top button-top-right">Button5</button> -->
+        <!-- <button class="button button-top button-top-right" style="right: 10px">Button 5</button> -->
+        <!-- Buttons at the bottom -->
+
+        <button class="button button-bottom" style="left: 10%">6</button>
+        <button class="button button-bottom" style="left: 30%">7</button>
+        <button class="button button-bottom" style="left: 50%">8</button>
+        <button class="button button-bottom" style="left: 70%">9</button>
+        <button class="button button-bottom" style="left: 90%">10</button>
+
+        <!-- <button class="button button-bottom button-bottom-left">Button 6</button>
+        <button class="button button-bottom" style="left: 50%">Button 7</button>
+        <button class="button button-bottom" style="right: 50%">Button 8</button>
+        <button class="button button-bottom button-bottom-right">Button 9</button>
+        <button class="button button-bottom button-bottom-right" style="right: 10px">Button 10</button> -->
+        <!-- Buttons at the left -->
+
+        <button class="button button-left" style="top: 10%">11</button>
+        <button class="button button-left" style="top: 30%">12</button>
+        <button class="button button-left" style="top: 50%">13</button>
+        <button class="button button-left" style="top: 70%">14</button>
+        <button class="button button-left" style="top: 90%">15</button>
+
+        <!-- <button class="button button-left" style="top: 20%">Button 11</button>
+        <button class="button button-left" style="top: 40%">Button 11</button>
+        <button class="button button-left" style="top: 60%">Button 12</button>
+        <button class="button button-left" style="top: 0%">Button 13</button> -->
+        <!-- Buttons at the right -->
+        
+        <button class="button button-right" style="top: 10%">11</button>
+        <button class="button button-right" style="top: 30%">12</button>
+        <button class="button button-right" style="top: 50%">13</button>
+        <button class="button button-right" style="top: 70%">14</button>
+        <button class="button button-right" style="top: 90%">15</button>   
+
+    </div>
+
+    <script>
+       async function simulateShift1AndSendToServer() {
+            var event = new KeyboardEvent('keydown', {
+                key: '1',
+                keyCode: 49, // Key code for '1'
+                ctrlKey: true
+            });
+
+            // Simulate Shift+1 locally
+            document.dispatchEvent(event);
+
+            // Send the command to the server
+            fetch('/send-keyboard-shortcut', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ shortcut: 'shift+1' }) // Send the shortcut information
+            }).then(response => {
+                // Handle response from server if needed
+                console.log('Shortcut sent to server');
+            }).catch(error => {
+                console.error('Error sending shortcut to server:', error);
+            });
+        }
+
+        // Add event listener to button
+        document.getElementById('button1').addEventListener('click', function() {
+            simulateShift1AndSendToServer(); // Simulate Shift+1 locally and send to server
+        });
+    </script>
+</body>
+</html>
