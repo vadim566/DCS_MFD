@@ -36,8 +36,10 @@ def video_feed():
 # Asynchronous function to process keyboard shortcuts
 async def process_keyboard_shortcut(shortcut):
     # Simulate keyboard input based on the received shortcut
-    if shortcut == 'shift+1':
-        pyautogui.hotkey('shiftleft', '1')
+    # if shortcut == 'shift+1':
+    key_val=shortcut.split('_')
+    print(key_val)
+    pyautogui.hotkey('shiftleft', str(key_val[1]))
         # Execute other actions here if needed
 
 # Route to receive keyboard shortcuts
@@ -45,7 +47,7 @@ async def process_keyboard_shortcut(shortcut):
 def receive_keyboard_shortcut():
     data = request.json
     shortcut = data.get('shortcut')
-
+    print(shortcut)
     # Process the received shortcut asynchronously in a separate thread
     threading.Thread(target=asyncio.run, args=(process_keyboard_shortcut(shortcut),)).start()
 

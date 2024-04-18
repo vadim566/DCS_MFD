@@ -68,19 +68,19 @@
         <!-- Buttons at the top -->
         <!-- <button class="button button-top button-top-left">Button 1</button> -->
         <button id='button1' class="button button-top" style="left: 10%">1</button>
-        <button class="button button-top" style="left: 30%">2</button>
-        <button class="button button-top" style="left: 50%">3</button>
-        <button class="button button-top" style="left: 70%">4</button>
-        <button class="button button-top" style="left: 90%">5</button>
+        <button id='button2' class="button button-top" style="left: 30%">2</button>
+        <button id='button3' class="button button-top" style="left: 50%">3</button>
+        <button id='button4' class="button button-top" style="left: 70%">4</button>
+        <button id='button5' class="button button-top" style="left: 90%">5</button>
         <!-- <button class="button button-top button-top-right">Button5</button> -->
         <!-- <button class="button button-top button-top-right" style="right: 10px">Button 5</button> -->
         <!-- Buttons at the bottom -->
 
-        <button class="button button-bottom" style="left: 10%">6</button>
-        <button class="button button-bottom" style="left: 30%">7</button>
-        <button class="button button-bottom" style="left: 50%">8</button>
-        <button class="button button-bottom" style="left: 70%">9</button>
-        <button class="button button-bottom" style="left: 90%">10</button>
+        <button id='button6' class="button button-bottom" style="left: 10%">6</button>
+        <button id='button7' class="button button-bottom" style="left: 30%">7</button>
+        <button id='button8' class="button button-bottom" style="left: 50%">8</button>
+        <button id='button9' class="button button-bottom" style="left: 70%">9</button>
+        <button id='button10' class="button button-bottom" style="left: 90%">10</button>
 
         <!-- <button class="button button-bottom button-bottom-left">Button 6</button>
         <button class="button button-bottom" style="left: 50%">Button 7</button>
@@ -89,11 +89,11 @@
         <button class="button button-bottom button-bottom-right" style="right: 10px">Button 10</button> -->
         <!-- Buttons at the left -->
 
-        <button class="button button-left" style="top: 10%">11</button>
-        <button class="button button-left" style="top: 30%">12</button>
-        <button class="button button-left" style="top: 50%">13</button>
-        <button class="button button-left" style="top: 70%">14</button>
-        <button class="button button-left" style="top: 90%">15</button>
+        <button id='button11' class="button button-left" style="top: 10%">11</button>
+        <button id='button12' class="button button-left" style="top: 30%">12</button>
+        <button id='button13' class="button button-left" style="top: 50%">13</button>
+        <button id='button14' class="button button-left" style="top: 70%">14</button>
+        <button id='button15' class="button button-left" style="top: 90%">15</button>
 
         <!-- <button class="button button-left" style="top: 20%">Button 11</button>
         <button class="button button-left" style="top: 40%">Button 11</button>
@@ -101,21 +101,137 @@
         <button class="button button-left" style="top: 0%">Button 13</button> -->
         <!-- Buttons at the right -->
         
-        <button class="button button-right" style="top: 10%">11</button>
-        <button class="button button-right" style="top: 30%">12</button>
-        <button class="button button-right" style="top: 50%">13</button>
-        <button class="button button-right" style="top: 70%">14</button>
-        <button class="button button-right" style="top: 90%">15</button>   
+        <button id='button16' class="button button-right" style="top: 10%">11</button>
+        <button id='button17' class="button button-right" style="top: 30%">12</button>
+        <button id='button18' class="button button-right" style="top: 50%">13</button>
+        <button id='button19' class="button button-right" style="top: 70%">14</button>
+        <button id='button20' class="button button-right" style="top: 90%">15</button>   
 
     </div>
 
     <script>
-       async function simulateShift1AndSendToServer() {
-            var event = new KeyboardEvent('keydown', {
+       async function simulateShift1AndSendToServer(id) {
+
+        if (id=="button1")
+         {   var event = new KeyboardEvent('keydown', {
                 key: '1',
                 keyCode: 49, // Key code for '1'
-                ctrlKey: true
-            });
+                
+            });}
+        if (id=="button2")
+         {   var event = new KeyboardEvent('keydown', {
+                key: '2',
+                keyCode: 50, // Key code for '1'
+                
+            });}
+        if (id=="button3")
+         {   var event = new KeyboardEvent('keydown', {
+                key: '3',
+                keyCode: 51, // Key code for '1'
+                
+            });}
+        if (id=="button4")
+         {   var event = new KeyboardEvent('keydown', {
+                key: '4',
+                keyCode: 52, // Key code for '1'
+                
+            });}
+        if (id=="button5")
+         {   var event = new KeyboardEvent('keydown', {
+                key: '5',
+                keyCode: 53, // Key code for '1'
+                
+            });}
+        if (id=="button6")
+         {   var event = new KeyboardEvent('keydown', {
+                key: '6',
+                keyCode: 53, // Key code for '1'
+                
+            });}
+        if (id=="button7")
+         {   var event = new KeyboardEvent('keydown', {
+                key: '7',
+                keyCode: 53, // Key code for '1'
+                
+            });}
+        if (id=="button8")
+         {   var event = new KeyboardEvent('keydown', {
+                key: '8',
+                keyCode: 53, // Key code for '1'
+                
+            });}
+        if (id=="button9")
+         {   var event = new KeyboardEvent('keydown', {
+                key: '9',
+                keyCode: 53, // Key code for '1'
+                
+            });}
+        if (id=="button10")
+         {   var event = new KeyboardEvent('keydown', {
+                key: '0',
+                keyCode: 48, // Key code for '1'
+                
+            });}
+        if (id=="button11")
+         {   var event = new KeyboardEvent('keydown', {
+                key: 'a',
+                keyCode: 97, // Key code for '1'
+                
+            });}
+        if (id=="button12")
+         {   var event = new KeyboardEvent('keydown', {
+                key: 'b',
+                keyCode: 98, // Key code for '1'
+                
+            });}
+        if (id=="button13")
+         {   var event = new KeyboardEvent('keydown', {
+                key: 'c',
+                keyCode: 99, // Key code for '1'
+                
+            });}
+        if (id=="button14")
+         {   var event = new KeyboardEvent('keydown', {
+                key: 'd',
+                keyCode: 100, // Key code for '1'
+                
+            });}
+        if (id=="button15")
+         {   var event = new KeyboardEvent('keydown', {
+                key: 'e',
+                keyCode: 101, // Key code for '1'
+                
+            });}
+        if (id=="button16")
+         {   var event = new KeyboardEvent('keydown', {
+                key: 'f',
+                keyCode: 102, // Key code for '1'
+                
+            });}
+        if (id=="button17")
+         {   var event = new KeyboardEvent('keydown', {
+                key: 'g',
+                keyCode: 103, // Key code for '1'
+                
+            });}
+        if (id=="button18")
+         {   var event = new KeyboardEvent('keydown', {
+                key: 'h',
+                keyCode: 104, // Key code for '1'
+                
+            });}
+        if (id=="button19")
+         {   var event = new KeyboardEvent('keydown', {
+                key: 'i',
+                keyCode: 105, // Key code for '1'
+                
+            });}
+        if (id=="button20")
+         {   var event = new KeyboardEvent('keydown', {
+                key: 'j',
+                keyCode: 106, // Key code for '1'
+                
+            });}
 
             // Simulate Shift+1 locally
             document.dispatchEvent(event);
@@ -126,7 +242,7 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ shortcut: 'shift+1' }) // Send the shortcut information
+                body: JSON.stringify({ shortcut: 'shift_'+(event.key) }) // Send the shortcut information
             }).then(response => {
                 // Handle response from server if needed
                 console.log('Shortcut sent to server');
@@ -137,7 +253,45 @@
 
         // Add event listener to button
         document.getElementById('button1').addEventListener('click', function() {
-            simulateShift1AndSendToServer(); // Simulate Shift+1 locally and send to server
+            simulateShift1AndSendToServer('button1');}) // Simulate Shift+1 locally and send to server
+        document.getElementById('button2').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button2');}) // Simulate Shift+1 locally and send to server
+        document.getElementById('button3').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button3'); })// Simulate Shift+1 locally and send to server
+        document.getElementById('button4').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button4');}) // Simulate Shift+1 locally and send to server
+        document.getElementById('button5').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button5');}) // Simulate Shift+1 locally and send to server
+        document.getElementById('button6').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button6'); })// Simulate Shift+1 locally and send to server
+        document.getElementById('button7').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button7');}) // Simulate Shift+1 locally and send to server
+        document.getElementById('button8').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button8'); })// Simulate Shift+1 locally and send to server
+        document.getElementById('button9').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button9'); })// Simulate Shift+1 locally and send to server
+        document.getElementById('button10').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button10');} )// Simulate Shift+1 locally and send to server
+        document.getElementById('button11').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button11'); })// Simulate Shift+1 locally and send to server
+        document.getElementById('button12').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button12');} )// Simulate Shift+1 locally and send to server
+        document.getElementById('button13').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button13'); })// Simulate Shift+1 locally and send to server
+        document.getElementById('button14').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button14'); })// Simulate Shift+1 locally and send to server
+        document.getElementById('button15').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button15'); })// Simulate Shift+1 locally and send to server
+        document.getElementById('button16').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button16'); })// Simulate Shift+1 locally and send to server
+        document.getElementById('button17').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button17'); })// Simulate Shift+1 locally and send to server
+        document.getElementById('button18').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button18'); })// Simulate Shift+1 locally and send to server
+        document.getElementById('button19').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button19'); })// Simulate Shift+1 locally and send to server
+        document.getElementById('button20').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button20'); // Simulate Shift+1 locally and send to server
         });
     </script>
 </body>
