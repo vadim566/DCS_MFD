@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <title>Screen Streaming with MFD Buttons</title>
     <style>
+   
         .container {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            border: 60px solid #31363F;
+            color: white;
         }
         .stream-container {
             position: relative;
             display: inline-block;
+            background-color: #222831;
         }
         .button {
             position: absolute;
-            background-color: #4CAF50;
-            border: none;
+            background-size: cover; /* Adjust the background size as needed */
+            background-repeat: no-repeat;
+            background-color: #173518;
+            border: 2px solid grey;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
             color: white;
             text-align: center;
             text-decoration: none;
@@ -25,7 +36,7 @@
             font-size: 16px;
             cursor: pointer;
             border-radius: 8px;
-            padding: 10px 20px;
+            padding: 20px 20px;
         }
         /* Button positions */
         .button-top {
@@ -57,30 +68,35 @@
             bottom: -50px;
             right: -50px;
         }
+        .body {
+            background-color: #f2f2f2; /* Light grey background */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
     </style>
 </head>
 <body>
-    <h1>Screen Streaming with MFD Buttons</h1>
+
     <div class="container">
         <div class="stream-container">
-            <img src="{{ url_for('video_feed') }}" width="800" height="600">
+            <img src="{{ url_for('video_feed') }}" width="400" height="500">
         </div>
         <!-- Buttons at the top -->
         <!-- <button class="button button-top button-top-left">Button 1</button> -->
-        <button id='button1' class="button button-top" style="left: 10%">1</button>
-        <button id='button2' class="button button-top" style="left: 30%">2</button>
-        <button id='button3' class="button button-top" style="left: 50%">3</button>
-        <button id='button4' class="button button-top" style="left: 70%">4</button>
-        <button id='button5' class="button button-top" style="left: 90%">5</button>
+        <button id='button1' class="button button-top" style="left: 10%"></button>
+        <button id='button2' class="button button-top" style="left: 30%"></button>
+        <button id='button3' class="button button-top" style="left: 50%"></button>
+        <button id='button4' class="button button-top" style="left: 70%"></button>
+        <button id='button5' class="button button-top" style="left: 90%"></button>
         <!-- <button class="button button-top button-top-right">Button5</button> -->
         <!-- <button class="button button-top button-top-right" style="right: 10px">Button 5</button> -->
         <!-- Buttons at the bottom -->
 
-        <button id='button6' class="button button-bottom" style="left: 10%">6</button>
-        <button id='button7' class="button button-bottom" style="left: 30%">7</button>
-        <button id='button8' class="button button-bottom" style="left: 50%">8</button>
-        <button id='button9' class="button button-bottom" style="left: 70%">9</button>
-        <button id='button10' class="button button-bottom" style="left: 90%">10</button>
+        <button id='button6' class="button button-bottom" style="left: 10%"></button>
+        <button id='button7' class="button button-bottom" style="left: 30%"></button>
+        <button id='button8' class="button button-bottom" style="left: 50%"></button>
+        <button id='button9' class="button button-bottom" style="left: 70%"></button>
+        <button id='button10' class="button button-bottom" style="left: 90%"></button>
 
         <!-- <button class="button button-bottom button-bottom-left">Button 6</button>
         <button class="button button-bottom" style="left: 50%">Button 7</button>
@@ -89,11 +105,11 @@
         <button class="button button-bottom button-bottom-right" style="right: 10px">Button 10</button> -->
         <!-- Buttons at the left -->
 
-        <button id='button11' class="button button-left" style="top: 10%">11</button>
-        <button id='button12' class="button button-left" style="top: 30%">12</button>
-        <button id='button13' class="button button-left" style="top: 50%">13</button>
-        <button id='button14' class="button button-left" style="top: 70%">14</button>
-        <button id='button15' class="button button-left" style="top: 90%">15</button>
+        <button id='button11' class="button button-left" style="top: 10%"></button>
+        <button id='button12' class="button button-left" style="top: 30%"></button>
+        <button id='button13' class="button button-left" style="top: 50%"></button>
+        <button id='button14' class="button button-left" style="top: 70%"></button>
+        <button id='button15' class="button button-left" style="top: 90%"></button>
 
         <!-- <button class="button button-left" style="top: 20%">Button 11</button>
         <button class="button button-left" style="top: 40%">Button 11</button>
@@ -101,11 +117,11 @@
         <button class="button button-left" style="top: 0%">Button 13</button> -->
         <!-- Buttons at the right -->
         
-        <button id='button16' class="button button-right" style="top: 10%">11</button>
-        <button id='button17' class="button button-right" style="top: 30%">12</button>
-        <button id='button18' class="button button-right" style="top: 50%">13</button>
-        <button id='button19' class="button button-right" style="top: 70%">14</button>
-        <button id='button20' class="button button-right" style="top: 90%">15</button>   
+        <button id='button16' class="button button-right" style="top: 10%"></button>
+        <button id='button17' class="button button-right" style="top: 30%"></button>
+        <button id='button18' class="button button-right" style="top: 50%"></button>
+        <button id='button19' class="button button-right" style="top: 70%"></button>
+        <button id='button20' class="button button-right" style="top: 90%"></button>   
 
     </div>
 
