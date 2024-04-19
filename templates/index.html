@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Screen Streaming with MFD Buttons</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
+    <head>
+        <meta charset="UTF-8">
+        <title>Screen Streaming with MFD Buttons</title>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <style>
         /* Additional CSS styles */
 
 
 
-        .button {
+        .btn {
            
        
 
@@ -20,7 +22,7 @@
             background-color: #173518;
             border: 2px solid grey;
             color: white;
-            padding: 10px 20px;
+          
             font-size: 16px;
             cursor: pointer;
             border-radius: 5px;
@@ -31,7 +33,7 @@
             font-size: 16px;
             cursor: pointer;
             border-radius: 8px;
-            padding: 20px 20px;
+          
       
             
             margin-top:20px;
@@ -43,231 +45,244 @@
         /* Remove default margin and padding from body */
 
     </style>
-</head>
+    </head>
 
-<body>
-    <h1 class="text-center">Screen Streaming with MFD Buttons</h1>
-    <div class="container">
-        <div class="CDU_PANEL col-12">
-            
-            <div class="col-6">
-            <div class="col-1">
+    <body>
+        <h1 class="text-center">Screen Streaming with MFD Buttons</h1>
+        <div class="container">
+            <div class="CDU_PANEL col-12">
+
+                <div class="col-7">
+                    <div class="col-1">
                         <div class="col align-items-center col-12">
-                        <button id='STEER_+' type="button" class=" button btn-lg col-2">+ </button>
-                        <button id='STEER_-' type="button" class=" button btn-lg col-2">- </button>
-                    </div>
-            </div>
+                            <button id='STEER_+' type="button"
+                                class="  btn  btn-lg col-2">+ </button>
+                            <button id='STEER_-' type="button"
+                                class="  btn  btn-lg col-2">- </button>
+                        </div>
 
-        </div>
-        <div class="row align-items-start">
-            <div class="col-6">
-
-                <div class="btn-group col-12">
-                    <div class="col align-items-center col-12">
-                        <button id='button1' type="button" class=" button btn-lg col-2">1 </button>
-                        <button id='button2' type="button" class=" button btn-lg col-2">2 </button>
-                        <button id='button3' type="button" class=" button btn-lg col-2">3 </button>
-                        <button id='button4' type="button" class=" button btn-lg col-2">4 </button>
-                        <button id='button5' type="button" class=" button btn-lg col-2">5 </button>
+                        <div class="btn-group col-11">
+                            <div class="col align-items-center col-12">
+                                <button id='CDU_1' type="button"
+                                    class="  btn  btn-lg col-2">1 </button>
+                                <button id='CDU_2' type="button"
+                                    class="  btn  btn-lg col-2">2 </button>
+                                <button id='CDU_3' type="button"
+                                    class="  btn  btn-lg col-2">3 </button>
+                                <button id='CDU_4' type="button"
+                                    class="  btn  btn-lg col-2">HACK </button>
+                                <button id='CDU_5' type="button"
+                                    class="  btn  btn-lg col-2">FUNC </button>
+                                <button id='CDU_6' type="func"
+                                    class="  btn  btn-lg col-2">FUNC </button>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
+                <div class="row align-items-start">
+                    <div class="col-6">
 
-                <div <div class="col-12">
-
-                    <div class="row align-items-start col-12">
-                        <div class="btn-group col">
-                            <div class="row align-items-center col-12">
-                                 
-                                 
-                                 
-                                 
-                                <button id='button6' type="button" class=" button btn-lg col">1 </button>
-                                 
-                                 
-                                 
-                                 
-                                <button id='button7' type="button" class=" button btn-lg col">2 </button>
-                                 
-                                 
-                                 
-                                 
-                                <button id='button8' type="button" class=" button btn-lg col">3 </button>
-                                 
-                                 
-                                 
-                                 
-                                <button id='button9' type="button" class=" button btn-lg col">4 </button>
-                                 
-                                 
-                                 
-                                 
-
-                                <button id='button10' type="button" class=" button btn-lg col">5 </button>
+                        <div class="btn-group col-12">
+                            <div class="col align-items-center col-12">
+                                <button id='button1' type="button"
+                                    class="  btn  btn-lg col-2">1 </button>
+                                <button id='button2' type="button"
+                                    class="  btn  btn-lg col-2">2 </button>
+                                <button id='button3' type="button"
+                                    class="  btn  btn-lg col-2">3 </button>
+                                <button id='button4' type="button"
+                                    class="  btn  btn-lg col-2">4 </button>
+                                <button id='button5' type="button"
+                                    class="  btn  btn-lg col-2">5 </button>
                             </div>
                         </div>
 
+                        <div class="col-12">
 
-                        <div class="col-9">
-                            <img src="{{ url_for('video_feed1') }}" class="img-fluid col-12 " alt="First video feed">
+                            <div class="row align-items-start col-12">
+                                <div class="btn-group col">
+                                    <div class="row align-items-center col-12">
+
+                                        <button id='button6' type="button"
+                                            class="  btn  btn-lg col">1
+                                        </button>
+
+                                        <button id='button7' type="button"
+                                            class="  btn  btn-lg col">2
+                                        </button>
+
+                                        <button id='button8' type="button"
+                                            class="  btn  btn-lg col">3
+                                        </button>
+
+                                        <button id='button9' type="button"
+                                            class="  btn  btn-lg col">4
+                                        </button>
+
+                                        <button id='button10' type="button"
+                                            class="  btn  btn-lg col">5
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="col-9">
+                                    <img src="{{ url_for('video_feed1') }}"
+                                        class="img-fluid col-12 "
+                                        alt="First video feed">
+                                </div>
+
+                                <div class="btn-group col">
+                                    <div class="row align-items-center col-12">
+
+                                        <button id='button11' type="button"
+                                            class="  btn  btn-lg col">1
+                                        </button>
+
+                                        <button id='button12' type="button"
+                                            class="  btn  btn-lg col">2
+                                        </button>
+
+                                        <button id='button13' type="button"
+                                            class="  btn  btn-lg col">3
+                                        </button>
+
+                                        <button id='button14' type="button"
+                                            class="  btn  btn-lg col">4
+                                        </button>
+
+                                        <button id='button15' type="button"
+                                            class="  btn  btn-lg col">5
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Buttons near the edges of the first stream -->
+
+                            </div>
+
                         </div>
-
-                        <div class="btn-group col">
-                            <div class="row align-items-center col-12">
-                                 
-                                 
-                                 
-                                 
-                                <button id='button11' type="button" class=" button btn-lg col">1 </button>
-                                 
-                                 
-                                 
-                                 
-                                <button id='button12' type="button" class=" button btn-lg col">2 </button>
-
-                                 
-                                 
-                                 
-                                  <button id='button13' type="button" class=" button btn-lg col">3 </button>
-
-                                 
-                                 
-                                 
-                                 <button id='button14' type="button" class=" button btn-lg col">4 </button>
-
-                                 
-                                 
-                                 
-                                 <button id='button15' type="button" class=" button btn-lg col">5 </button>
+                        <div class="btn-group col-12">
+                            <div class="col align-items-center col-12">
+                                <button id='button16' type="button"
+                                    class="  btn  btn-lg col-2">1 </button>
+                                <button id='button17' type="button"
+                                    class="  btn  btn-lg col-2">2 </button>
+                                <button id='button18' type="button"
+                                    class="  btn  btn-lg col-2">3 </button>
+                                <button id='button19' type="button"
+                                    class="  btn  btn-lg col-2">4 </button>
+                                <button id='button20' type="button"
+                                    class="  btn  btn-lg col-2">5 </button>
                             </div>
                         </div>
 
-
-
-
-                        <!-- Buttons near the edges of the first stream -->
-
                     </div>
 
-                </div>
-                <div class="btn-group col-12">
-                    <div class="col align-items-center col-12">
-                        <button id='button16' type="button" class=" button btn-lg col-2">1 </button>
-                        <button id='button17' type="button" class=" button btn-lg col-2">2 </button>
-                        <button id='button18' type="button" class=" button btn-lg col-2">3 </button>
-                        <button id='button19' type="button" class=" button btn-lg col-2">4 </button>
-                        <button id='button20' type="button" class=" button btn-lg col-2">5 </button>
-                    </div>
-                </div>
+                    <div class="col-6">
 
-            </div>
-
-            
- <div class="col-6">
-
-                <div class="btn-group col-12">
-                    <div class="col align-items-center col-12">
-                        <button id='button21' type="button" class=" button btn-lg col-2">1 </button>
-                        <button id='button22' type="button" class=" button btn-lg col-2">2 </button>
-                        <button id='button23' type="button" class=" button btn-lg col-2">3 </button>
-                        <button id='button24' type="button" class=" button btn-lg col-2">4 </button>
-                        <button id='button25' type="button" class=" button btn-lg col-2">5 </button>
-                    </div>
-                </div>
-
-                <div <div class="col-12">
-
-                    <div class="row align-items-start col-12">
-                        <div class="btn-group col">
-                            <div class="row align-items-center col-12">
-                                 
-                                 
-                                 
-                                 
-                                <button id='button26' type="button" class=" button btn-lg col">1 </button>
-                                 
-                                 
-                                 
-                                 
-                                <button id='button27' type="button" class=" button btn-lg col">2 </button>
-                                 
-                                 
-                                 
-                                 
-                                <button id='button28' type="button" class=" button btn-lg col">3 </button>
-                                 
-                                 
-                                 
-                                 
-                                <button id='button29' type="button" class=" button btn-lg col">4 </button>
-                                 
-                                 
-                                 
-                                 
-
-                                <button id='button30' type="button" class=" button btn-lg col">5 </button>
+                        <div class="btn-group col-12">
+                            <div class="col align-items-center col-12">
+                                <button id='button21' type="button"
+                                    class="  btn  btn-lg col-2">1 </button>
+                                <button id='button22' type="button"
+                                    class="  btn  btn-lg col-2">2 </button>
+                                <button id='button23' type="button"
+                                    class="  btn  btn-lg col-2">3 </button>
+                                <button id='button24' type="button"
+                                    class="  btn  btn-lg col-2">4 </button>
+                                <button id='button25' type="button"
+                                    class="  btn  btn-lg col-2">5 </button>
                             </div>
                         </div>
 
+                        <div class="col-12">
 
-                        <div class="col-9">
-                            <img src="{{ url_for('video_feed1') }}" class="img-fluid col-12 " alt="First video feed">
+                            <div class="row align-items-start col-12">
+                                <div class="btn-group col">
+                                    <div class="row align-items-center col-12">
+
+                                        <button id='button26' type="button"
+                                            class="  btn  btn-lg col">1
+                                        </button>
+
+                                        <button id='button27' type="button"
+                                            class="  btn  btn-lg col">2
+                                        </button>
+
+                                        <button id='button28' type="button"
+                                            class="  btn  btn-lg col">3
+                                        </button>
+
+                                        <button id='button29' type="button"
+                                            class="  btn  btn-lg col">4
+                                        </button>
+
+                                        <button id='button30' type="button"
+                                            class="  btn  btn-lg col">5
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="col-9">
+                                    <img src="{{ url_for('video_feed1') }}"
+                                        class="img-fluid col-12 "
+                                        alt="First video feed">
+                                </div>
+
+                                <div class="btn-group col">
+                                    <div class="row align-items-center col-12">
+
+                                        <button id='button31' type="button"
+                                            class="  btn  btn-lg col">1
+                                        </button>
+
+                                        <button id='button32' type="button"
+                                            class="  btn  btn-lg col">2
+                                        </button>
+
+                                        <button id='button33' type="button"
+                                            class="  btn  btn-lg col">3
+                                        </button>
+
+                                        <button id='button34' type="button"
+                                            class="  btn  btn-lg col">4
+                                        </button>
+
+                                        <button id='button35' type="button"
+                                            class="  btn  btn-lg col">5
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Buttons near the edges of the first stream -->
+
+                            </div>
+
                         </div>
-
-                        <div class="btn-group col">
-                            <div class="row align-items-center col-12">
-                                 
-                                 
-                                 
-                                 
-                                <button id='button31' type="button" class=" button btn-lg col">1 </button>
-                                 
-                                 
-                                 
-                                 
-                                <button id='button32' type="button" class=" button btn-lg col">2 </button>
-
-                                 
-                                 
-                                 
-                                  <button id='button33' type="button" class=" button btn-lg col">3 </button>
-
-                                 
-                                 
-                                 
-                                 <button id='button34' type="button" class=" button btn-lg col">4 </button>
-
-                                 
-                                 
-                                 
-                                 <button id='button35' type="button" class=" button btn-lg col">5 </button>
+                        <div class="btn-group col-12">
+                            <div class="col align-items-center col-12">
+                                <button id='button36' type="button"
+                                    class="  btn  btn-lg col-2">1 </button>
+                                <button id='button37' type="button"
+                                    class="  btn  btn-lg col-2">2 </button>
+                                <button id='button38' type="button"
+                                    class="  btn  btn-lg col-2">3 </button>
+                                <button id='button39' type="button"
+                                    class="  btn  btn-lg col-2">4 </button>
+                                <button id='button40' type="button"
+                                    class="  btn  btn-lg col-2">5 </button>
                             </div>
                         </div>
 
-
-
-
-                        <!-- Buttons near the edges of the first stream -->
-
-                    </div>
-
-                </div>
-                <div class="btn-group col-12">
-                    <div class="col align-items-center col-12">
-                        <button id='button36' type="button" class=" button btn-lg col-2">1 </button>
-                        <button id='button37' type="button" class=" button btn-lg col-2">2 </button>
-                        <button id='button38' type="button" class=" button btn-lg col-2">3 </button>
-                        <button id='button39' type="button" class=" button btn-lg col-2">4 </button>
-                        <button id='button40' type="button" class=" button btn-lg col-2">5 </button>
                     </div>
                 </div>
 
-            </div>
-    </div>
+                <!-- Bootstrap Bundle with Popper -->
+                <script
+                    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
+                <script>
         // Add event listeners to buttons for the first stream
 for (let i = 1; i <= 20; i++) {
     document.getElementById('button' + i).addEventListener('click', function() {
@@ -393,9 +408,23 @@ for (let i = 21; i <= 40; i++) {
             return;
     }
 
+    const buttonNumber = parseInt(id.replace('button', ''));
+
+    // Determine key and keyCode based on button number
+    if (buttonNumber > 20) {
+        // Send Ctrl key
+        key = 'ctrl_'+key;
+        keyCode = 17; // Key code for 'Ctrl' key
+    } else {
+        // Send Shift key
+        key = 'shift_'+key;
+        keyCode = 16; // Key code for 'Shift' key
+    }
+
+    // Create KeyboardEvent
     const event = new KeyboardEvent('keydown', {
         key: key,
-        keyCode: keyCode,
+        keyCode: keyCode
     });
 
 
@@ -409,7 +438,7 @@ for (let i = 21; i <= 40; i++) {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    shortcut: 'shift_' + key
+                    shortcut: key
                 }) // Send the shortcut information
             }).then(response => {
                 // Handle response from server if needed
@@ -419,6 +448,6 @@ for (let i = 21; i <= 40; i++) {
             });
         }
     </script>
-</body>
+            </body>
 
-</html>
+        </html>

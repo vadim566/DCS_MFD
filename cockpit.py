@@ -46,7 +46,7 @@ def index():
 # Asynchronous function to process keyboard shortcuts
 async def process_keyboard_shortcut(keys):
     key_val = keys.split('_')
-    keys = ["shift", str(key_val[1])]
+    keys = [str(key_val[0]), str(key_val[1])]
     for key in keys:
         keyboard.press(key)
         await asyncio.sleep(0.1)  # You may adjust the delay as needed
