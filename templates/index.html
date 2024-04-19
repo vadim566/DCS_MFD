@@ -1,253 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Screen Streaming with MFD Buttons</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-   
-        .container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border: 60px solid #31363F;
-            color: white;
-        }
-        .stream-container {
-            position: relative;
-            display: inline-block;
-            background-color: #222831;
-        }
-        .button {
-            position: absolute;
-            background-size: cover; /* Adjust the background size as needed */
+        /* Additional CSS styles */
+
+
+
+        .btn {
+           
+            background-size: cover;
+            /* Adjust the background size as needed */
             background-repeat: no-repeat;
             background-color: #173518;
-            border: 2px solid grey;
+     
             color: white;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 8px;
-            padding: 20px 20px;
+        
+
+          
+            
+            margin-top:20px;
+            margin-top:20px;
         }
+
         /* Button positions */
-        .button-top {
-            top: -50px;
-        }
-        .button-bottom {
-            bottom: -50px;
-        }
-        .button-left {
-            left: -50px;
-        }
-        .button-right {
-            right: -50px;
-        }
-        /* Example button positions */
-        .button-top-left {
-            top: -50px;
-            left: -50px;
-        }
-        .button-top-right {
-            top: -50px;
-            right: -50px;
-        }
-        .button-bottom-left {
-            bottom: -50px;
-            left: -50px;
-        }
-        .button-bottom-right {
-            bottom: -50px;
-            right: -50px;
-        }
-        .body {
-            background-color: #f2f2f2; /* Light grey background */
-            margin: 0; /* Remove default margin */
-            padding: 0; /* Remove default padding */
-        }
+
+        /* Remove default margin and padding from body */
+
     </style>
 </head>
+
 <body>
-
+    <h1 class="text-center">Screen Streaming with MFD Buttons</h1>
     <div class="container">
-        <div class="stream-container">
-            <img src="{{ url_for('video_feed') }}" width="400" height="500">
+        <div class="CDU_PANEL col-12">
+            
+            <div class="col-1">
+                        <div class="col align-items-center col-12">
+                        <button id='STEER_+' type="button" class="btn  btn-default btn-lg col-2">+ </button>
+                        <button id='STEER_-' type="button" class="btn  btn-default btn-lg col-2">- </button>
+                    </div>
+            </div>
+
         </div>
-        <!-- Buttons at the top -->
-        <!-- <button class="button button-top button-top-left">Button 1</button> -->
-        <button id='button1' class="button button-top" style="left: 10%"></button>
-        <button id='button2' class="button button-top" style="left: 30%"></button>
-        <button id='button3' class="button button-top" style="left: 50%"></button>
-        <button id='button4' class="button button-top" style="left: 70%"></button>
-        <button id='button5' class="button button-top" style="left: 90%"></button>
-        <!-- <button class="button button-top button-top-right">Button5</button> -->
-        <!-- <button class="button button-top button-top-right" style="right: 10px">Button 5</button> -->
-        <!-- Buttons at the bottom -->
+        <div class="row align-items-start">
+            <div class="col-6">
 
-        <button id='button6' class="button button-bottom" style="left: 10%"></button>
-        <button id='button7' class="button button-bottom" style="left: 30%"></button>
-        <button id='button8' class="button button-bottom" style="left: 50%"></button>
-        <button id='button9' class="button button-bottom" style="left: 70%"></button>
-        <button id='button10' class="button button-bottom" style="left: 90%"></button>
+                <div class="btn-group col-12">
+                    <div class="col align-items-center col-12">
+                        <button id='button1' type="button" class="btn  btn-default btn-lg col-2">1 </button>
+                        <button id='button2' type="button" class="btn  btn-default btn-lg col-2">2 </button>
+                        <button id='button3' type="button" class="btn  btn-default btn-lg col-2">3 </button>
+                        <button id='button4' type="button" class="btn  btn-default btn-lg col-2">4 </button>
+                        <button id='button5' type="button" class="btn  btn-default btn-lg col-2">5 </button>
+                    </div>
+                </div>
 
-        <!-- <button class="button button-bottom button-bottom-left">Button 6</button>
-        <button class="button button-bottom" style="left: 50%">Button 7</button>
-        <button class="button button-bottom" style="right: 50%">Button 8</button>
-        <button class="button button-bottom button-bottom-right">Button 9</button>
-        <button class="button button-bottom button-bottom-right" style="right: 10px">Button 10</button> -->
-        <!-- Buttons at the left -->
+                <div <div class="col-12">
 
-        <button id='button11' class="button button-left" style="top: 10%"></button>
-        <button id='button12' class="button button-left" style="top: 30%"></button>
-        <button id='button13' class="button button-left" style="top: 50%"></button>
-        <button id='button14' class="button button-left" style="top: 70%"></button>
-        <button id='button15' class="button button-left" style="top: 90%"></button>
+                    <div class="row align-items-start col-12">
+                        <div class="btn-group col">
+                            <div class="row align-items-center col-12">
+                                 
+                                 
+                                 
+                                 
+                                <button id='button6' type="button" class="btn  btn-default btn-lg col">1 </button>
+                                 
+                                 
+                                 
+                                 
+                                <button id='button7' type="button" class="btn  btn-default btn-lg col">2 </button>
+                                 
+                                 
+                                 
+                                 
+                                <button id='button8' type="button" class="btn  btn-default btn-lg col">3 </button>
+                                 
+                                 
+                                 
+                                 
+                                <button id='button9' type="button" class="btn  btn-default btn-lg col">4 </button>
+                                 
+                                 
+                                 
+                                 
 
-        <!-- <button class="button button-left" style="top: 20%">Button 11</button>
-        <button class="button button-left" style="top: 40%">Button 11</button>
-        <button class="button button-left" style="top: 60%">Button 12</button>
-        <button class="button button-left" style="top: 0%">Button 13</button> -->
-        <!-- Buttons at the right -->
-        
-        <button id='button16' class="button button-right" style="top: 10%"></button>
-        <button id='button17' class="button button-right" style="top: 30%"></button>
-        <button id='button18' class="button button-right" style="top: 50%"></button>
-        <button id='button19' class="button button-right" style="top: 70%"></button>
-        <button id='button20' class="button button-right" style="top: 90%"></button>   
+                                <button id='button10' type="button" class="btn  btn-default btn-lg col">5 </button>
+                            </div>
+                        </div>
 
+
+                        <div class="col-9">
+                            <img src="{{ url_for('video_feed1') }}" class="img-fluid col-12 " alt="First video feed">
+                        </div>
+
+                        <div class="btn-group col">
+                            <div class="row align-items-center col-12">
+                                 
+                                 
+                                 
+                                 
+                                <button id='button11' type="button" class="btn  btn-default btn-lg col">1 </button>
+                                 
+                                 
+                                 
+                                 
+                                <button id='button12' type="button" class="btn  btn-default btn-lg col">2 </button>
+
+                                 
+                                 
+                                 
+                                  <button id='button13' type="button" class="btn  btn-default btn-lg col">3 </button>
+
+                                 
+                                 
+                                 
+                                 <button id='button14' type="button" class="btn  btn-default btn-lg col">4 </button>
+
+                                 
+                                 
+                                 
+                                 <button id='button15' type="button" class="btn  btn-default btn-lg col">5 </button>
+                            </div>
+                        </div>
+
+
+
+
+                        <!-- Buttons near the edges of the first stream -->
+
+                    </div>
+
+                </div>
+                <div class="btn-group col-12">
+                    <div class="col align-items-center col-12">
+                        <button id='button16' type="button" class="btn  btn-default btn-lg col-2">1 </button>
+                        <button id='button17' type="button" class="btn  btn-default btn-lg col-2">2 </button>
+                        <button id='button18' type="button" class="btn  btn-default btn-lg col-2">3 </button>
+                        <button id='button19' type="button" class="btn  btn-default btn-lg col-2">4 </button>
+                        <button id='button20' type="button" class="btn  btn-default btn-lg col-2">5 </button>
+                    </div>
+                </div>
+
+            </div>
+
+            
+ <div class="col-6">
+
+                <div class="btn-group col-12">
+                    <div class="col align-items-center col-12">
+                        <button id='button21' type="button" class="btn  btn-default btn-lg col-2">1 </button>
+                        <button id='button22' type="button" class="btn  btn-default btn-lg col-2">2 </button>
+                        <button id='button23' type="button" class="btn  btn-default btn-lg col-2">3 </button>
+                        <button id='button24' type="button" class="btn  btn-default btn-lg col-2">4 </button>
+                        <button id='button25' type="button" class="btn  btn-default btn-lg col-2">5 </button>
+                    </div>
+                </div>
+
+                <div <div class="col-12">
+
+                    <div class="row align-items-start col-12">
+                        <div class="btn-group col">
+                            <div class="row align-items-center col-12">
+                                 
+                                 
+                                 
+                                 
+                                <button id='button26' type="button" class="btn  btn-default btn-lg col">1 </button>
+                                 
+                                 
+                                 
+                                 
+                                <button id='button27' type="button" class="btn  btn-default btn-lg col">2 </button>
+                                 
+                                 
+                                 
+                                 
+                                <button id='button28' type="button" class="btn  btn-default btn-lg col">3 </button>
+                                 
+                                 
+                                 
+                                 
+                                <button id='button29' type="button" class="btn  btn-default btn-lg col">4 </button>
+                                 
+                                 
+                                 
+                                 
+
+                                <button id='button30' type="button" class="btn  btn-default btn-lg col">5 </button>
+                            </div>
+                        </div>
+
+
+                        <div class="col-9">
+                            <img src="{{ url_for('video_feed1') }}" class="img-fluid col-12 " alt="First video feed">
+                        </div>
+
+                        <div class="btn-group col">
+                            <div class="row align-items-center col-12">
+                                 
+                                 
+                                 
+                                 
+                                <button id='button31' type="button" class="btn  btn-default btn-lg col">1 </button>
+                                 
+                                 
+                                 
+                                 
+                                <button id='button32' type="button" class="btn  btn-default btn-lg col">2 </button>
+
+                                 
+                                 
+                                 
+                                  <button id='button33' type="button" class="btn  btn-default btn-lg col">3 </button>
+
+                                 
+                                 
+                                 
+                                 <button id='button34' type="button" class="btn  btn-default btn-lg col">4 </button>
+
+                                 
+                                 
+                                 
+                                 <button id='button35' type="button" class="btn  btn-default btn-lg col">5 </button>
+                            </div>
+                        </div>
+
+
+
+
+                        <!-- Buttons near the edges of the first stream -->
+
+                    </div>
+
+                </div>
+                <div class="btn-group col-12">
+                    <div class="col align-items-center col-12">
+                        <button id='button36' type="button" class="btn  btn-default btn-lg col-2">1 </button>
+                        <button id='button37' type="button" class="btn  btn-default btn-lg col-2">2 </button>
+                        <button id='button38' type="button" class="btn  btn-default btn-lg col-2">3 </button>
+                        <button id='button39' type="button" class="btn  btn-default btn-lg col-2">4 </button>
+                        <button id='button0' type="button" class="btn  btn-default btn-lg col-2">5 </button>
+                    </div>
+                </div>
+
+            </div>
     </div>
 
-    <script>
-       async function simulateShift1AndSendToServer(id) {
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-        if (id=="button1")
-         {   var event = new KeyboardEvent('keydown', {
-                key: '1',
-                keyCode: 49, // Key code for '1'
-                
-            });}
-        if (id=="button2")
-         {   var event = new KeyboardEvent('keydown', {
-                key: '2',
-                keyCode: 50, // Key code for '1'
-                
-            });}
-        if (id=="button3")
-         {   var event = new KeyboardEvent('keydown', {
-                key: '3',
-                keyCode: 51, // Key code for '1'
-                
-            });}
-        if (id=="button4")
-         {   var event = new KeyboardEvent('keydown', {
-                key: '4',
-                keyCode: 52, // Key code for '1'
-                
-            });}
-        if (id=="button5")
-         {   var event = new KeyboardEvent('keydown', {
-                key: '5',
-                keyCode: 53, // Key code for '1'
-                
-            });}
-        if (id=="button6")
-         {   var event = new KeyboardEvent('keydown', {
-                key: '6',
-                keyCode: 53, // Key code for '1'
-                
-            });}
-        if (id=="button7")
-         {   var event = new KeyboardEvent('keydown', {
-                key: '7',
-                keyCode: 53, // Key code for '1'
-                
-            });}
-        if (id=="button8")
-         {   var event = new KeyboardEvent('keydown', {
-                key: '8',
-                keyCode: 53, // Key code for '1'
-                
-            });}
-        if (id=="button9")
-         {   var event = new KeyboardEvent('keydown', {
-                key: '9',
-                keyCode: 53, // Key code for '1'
-                
-            });}
-        if (id=="button10")
-         {   var event = new KeyboardEvent('keydown', {
-                key: '0',
-                keyCode: 48, // Key code for '1'
-                
-            });}
-        if (id=="button11")
-         {   var event = new KeyboardEvent('keydown', {
-                key: 'a',
-                keyCode: 97, // Key code for '1'
-                
-            });}
-        if (id=="button12")
-         {   var event = new KeyboardEvent('keydown', {
-                key: 'b',
-                keyCode: 98, // Key code for '1'
-                
-            });}
-        if (id=="button13")
-         {   var event = new KeyboardEvent('keydown', {
-                key: 'c',
-                keyCode: 99, // Key code for '1'
-                
-            });}
-        if (id=="button14")
-         {   var event = new KeyboardEvent('keydown', {
-                key: 'd',
-                keyCode: 100, // Key code for '1'
-                
-            });}
-        if (id=="button15")
-         {   var event = new KeyboardEvent('keydown', {
-                key: 'e',
-                keyCode: 101, // Key code for '1'
-                
-            });}
-        if (id=="button16")
-         {   var event = new KeyboardEvent('keydown', {
-                key: 'f',
-                keyCode: 102, // Key code for '1'
-                
-            });}
-        if (id=="button17")
-         {   var event = new KeyboardEvent('keydown', {
-                key: 'g',
-                keyCode: 103, // Key code for '1'
-                
-            });}
-        if (id=="button18")
-         {   var event = new KeyboardEvent('keydown', {
-                key: 'h',
-                keyCode: 104, // Key code for '1'
-                
-            });}
-        if (id=="button19")
-         {   var event = new KeyboardEvent('keydown', {
-                key: 'i',
-                keyCode: 105, // Key code for '1'
-                
-            });}
-        if (id=="button20")
-         {   var event = new KeyboardEvent('keydown', {
-                key: 'j',
-                keyCode: 106, // Key code for '1'
-                
-            });}
+    <script>
+        // Add event listeners to buttons for the first stream
+        document.getElementById('button1').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button1');
+        });
+        document.getElementById('button2').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button2');
+        });
+        // Add event listeners to buttons for the second stream
+        document.getElementById('button21').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button21');
+        });
+        document.getElementById('button22').addEventListener('click', function() {
+            simulateShift1AndSendToServer('button22');
+        });
+
+        // Function to simulate Shift+1 and send to server
+        async function simulateShift1AndSendToServer(id) {
+            // Create KeyboardEvent based on button ID
+            let key;
+            switch (id) {
+                case 'button1':
+                    key = '1';
+                    break;
+                case 'button2':
+                    key = '2';
+                    break;
+                    // Add cases for other buttons as needed
+                default:
+                    key = '';
+                    break;
+            }
+            const event = new KeyboardEvent('keydown', {
+                key: key,
+                keyCode: key.charCodeAt(0), // Get ASCII code for the key
+            });
 
             // Simulate Shift+1 locally
             document.dispatchEvent(event);
@@ -258,7 +301,9 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ shortcut: 'shift_'+(event.key) }) // Send the shortcut information
+                body: JSON.stringify({
+                    shortcut: 'shift_' + key
+                }) // Send the shortcut information
             }).then(response => {
                 // Handle response from server if needed
                 console.log('Shortcut sent to server');
@@ -266,49 +311,7 @@
                 console.error('Error sending shortcut to server:', error);
             });
         }
-
-        // Add event listener to button
-        document.getElementById('button1').addEventListener('click', function() {
-            simulateShift1AndSendToServer('button1');}) // Simulate Shift+1 locally and send to server
-        document.getElementById('button2').addEventListener('click', function() {
-            simulateShift1AndSendToServer('button2');}) // Simulate Shift+1 locally and send to server
-        document.getElementById('button3').addEventListener('click', function() {
-            simulateShift1AndSendToServer('button3'); })// Simulate Shift+1 locally and send to server
-        document.getElementById('button4').addEventListener('click', function() {
-            simulateShift1AndSendToServer('button4');}) // Simulate Shift+1 locally and send to server
-        document.getElementById('button5').addEventListener('click', function() {
-            simulateShift1AndSendToServer('button5');}) // Simulate Shift+1 locally and send to server
-        document.getElementById('button6').addEventListener('click', function() {
-            simulateShift1AndSendToServer('button6'); })// Simulate Shift+1 locally and send to server
-        document.getElementById('button7').addEventListener('click', function() {
-            simulateShift1AndSendToServer('button7');}) // Simulate Shift+1 locally and send to server
-        document.getElementById('button8').addEventListener('click', function() {
-            simulateShift1AndSendToServer('button8'); })// Simulate Shift+1 locally and send to server
-        document.getElementById('button9').addEventListener('click', function() {
-            simulateShift1AndSendToServer('button9'); })// Simulate Shift+1 locally and send to server
-        document.getElementById('button10').addEventListener('click', function() {
-            simulateShift1AndSendToServer('button10');} )// Simulate Shift+1 locally and send to server
-        document.getElementById('button11').addEventListener('click', function() {
-            simulateShift1AndSendToServer('button11'); })// Simulate Shift+1 locally and send to server
-        document.getElementById('button12').addEventListener('click', function() {
-            simulateShift1AndSendToServer('button12');} )// Simulate Shift+1 locally and send to server
-        document.getElementById('button13').addEventListener('click', function() {
-            simulateShift1AndSendToServer('button13'); })// Simulate Shift+1 locally and send to server
-        document.getElementById('button14').addEventListener('click', function() {
-            simulateShift1AndSendToServer('button14'); })// Simulate Shift+1 locally and send to server
-        document.getElementById('button15').addEventListener('click', function() {
-            simulateShift1AndSendToServer('button15'); })// Simulate Shift+1 locally and send to server
-        document.getElementById('button16').addEventListener('click', function() {
-            simulateShift1AndSendToServer('button16'); })// Simulate Shift+1 locally and send to server
-        document.getElementById('button17').addEventListener('click', function() {
-            simulateShift1AndSendToServer('button17'); })// Simulate Shift+1 locally and send to server
-        document.getElementById('button18').addEventListener('click', function() {
-            simulateShift1AndSendToServer('button18'); })// Simulate Shift+1 locally and send to server
-        document.getElementById('button19').addEventListener('click', function() {
-            simulateShift1AndSendToServer('button19'); })// Simulate Shift+1 locally and send to server
-        document.getElementById('button20').addEventListener('click', function() {
-            simulateShift1AndSendToServer('button20'); // Simulate Shift+1 locally and send to server
-        });
     </script>
 </body>
+
 </html>
