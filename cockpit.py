@@ -5,7 +5,8 @@ import numpy as np
 import threading
 import asyncio
 import keyboard
-
+from PIL import Image
+from io import BytesIO
 app = Flask(__name__)
 mfd_left=(1919,683,703,703)
 mfd_right=(1919,1,703,703)
@@ -13,20 +14,36 @@ mfd_right=(1919,1,703,703)
 def capture_screen1():
     while True:
         screen = pyautogui.screenshot(region=mfd_left, allScreens=True)
-        frame = cv2.cvtColor(np.array(screen), cv2.COLOR_RGB2BGR)
-        ret, jpeg = cv2.imencode('.jpg', frame)
+        # Convert PIL Image to numpy array
+        frame = np.array(screen)
+        # Convert RGB image to BGR (OpenCV format)
+        frame_bgr = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
+        # Convert numpy array to PIL Image
+        image = Image.fromarray(frame_bgr)
+        # Convert image to WebP format
+        with BytesIO() as output:
+            image.save(output, format='WEBP')
+            frame_webp = output.getvalue()
         yield (b'--frame\r\n'
-               b'Content-Type: image/jpeg\r\n\r\n' + jpeg.tobytes() + b'\r\n')
+               b'Content-Type: image/webp\r\n\r\n' + frame_webp + b'\r\n')
 
 # Function to capture the second part of your screen
 def capture_screen2():
     while True:
-        # Modify the coordinates and dimensions as per your second screen region
+        
         screen = pyautogui.screenshot(region=mfd_right, allScreens=True)
-        frame = cv2.cvtColor(np.array(screen), cv2.COLOR_RGB2BGR)
-        ret, jpeg = cv2.imencode('.jpg', frame)
+        # Convert PIL Image to numpy array
+        frame = np.array(screen)
+        # Convert RGB image to BGR (OpenCV format)
+        frame_bgr = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
+        # Convert numpy array to PIL Image
+        image = Image.fromarray(frame_bgr)
+        # Convert image to WebP format
+        with BytesIO() as output:
+            image.save(output, format='WEBP')
+            frame_webp = output.getvalue()
         yield (b'--frame\r\n'
-               b'Content-Type: image/jpeg\r\n\r\n' + jpeg.tobytes() + b'\r\n')
+               b'Content-Type: image/webp\r\n\r\n' + frame_webp + b'\r\n')
 
 # Route to stream the first part of the screen
 @app.route('/video_feed1')
@@ -46,7 +63,7 @@ def index():
 # Asynchronous function to process keyboard shortcuts
 async def process_keyboard_shortcut(keys):
     key_val = keys.split('_')
-    keys = [str(key_val[0]), str(key_val[1])]
+    keys = key_val
     for key in keys:
         keyboard.press(key)
         await asyncio.sleep(0.1)  # You may adjust the delay as needed

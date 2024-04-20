@@ -23,21 +23,38 @@
             border: 2px solid grey;
             color: white;
           
-            font-size: 16px;
-            cursor: pointer;
+       
             border-radius: 5px;
             color: white;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 16px;
+            font-size: 10px;
             cursor: pointer;
             border-radius: 8px;
           
       
-            
             margin-top:20px;
             margin-top:20px;
+        }
+
+        .btn-CDU {
+            height: 50px;
+            width: 50px;
+
+        }
+        .container{
+
+            border-radius: 5px;
+            border: 5px solid black;
+             background-color: rgb(31, 30, 30);
+             color: white;
+        }
+        .mfd{
+
+            border-radius: 5px;
+            border: 5px solid black;
+            background-color: rgb(31, 30, 30);
         }
 
         /* Button positions */
@@ -50,239 +67,438 @@
     <body>
         <h1 class="text-center">Screen Streaming with MFD Buttons</h1>
         <div class="container">
-            <div class="CDU_PANEL col-12">
-
-                <div class="col-7">
-                    <div class="col-1">
-                        <div class="col align-items-center col-12">
-                            <button id='STEER_+' type="button"
-                                class="  btn  btn-lg col-2">+ </button>
-                            <button id='STEER_-' type="button"
-                                class="  btn  btn-lg col-2">- </button>
-                        </div>
-
-                        <div class="btn-group col-11">
-                            <div class="col align-items-center col-12">
-                                <button id='CDU_1' type="button"
-                                    class="  btn  btn-lg col-2">1 </button>
-                                <button id='CDU_2' type="button"
-                                    class="  btn  btn-lg col-2">2 </button>
-                                <button id='CDU_3' type="button"
-                                    class="  btn  btn-lg col-2">3 </button>
-                                <button id='CDU_4' type="button"
-                                    class="  btn  btn-lg col-2">HACK </button>
-                                <button id='CDU_5' type="button"
-                                    class="  btn  btn-lg col-2">FUNC </button>
-                                <button id='CDU_6' type="func"
-                                    class="  btn  btn-lg col-2">FUNC </button>
-                            </div>
-                        </div>
+            <div class="row">
+                <div class="col-1">
+                    <div class="col-2 mb-2">
+                        <button type="button" id="UFC_1"
+                            class="  btn btn-CDU btn-sm btn-primary">STEER +
+                        </button>
                     </div>
-
+                    <div class="col-2 mb-2">
+                        <button type="button" id="UFC_2"
+                            class="  btn btn-CDU btn-sm btn-primary">STEER -
+                        </button>
+                    </div>
                 </div>
-                <div class="row align-items-start">
-                    <div class="col-6">
-
-                        <div class="btn-group col-12">
-                            <div class="col align-items-center col-12">
-                                <button id='button1' type="button"
-                                    class="  btn  btn-lg col-2">1 </button>
-                                <button id='button2' type="button"
-                                    class="  btn  btn-lg col-2">2 </button>
-                                <button id='button3' type="button"
-                                    class="  btn  btn-lg col-2">3 </button>
-                                <button id='button4' type="button"
-                                    class="  btn  btn-lg col-2">4 </button>
-                                <button id='button5' type="button"
-                                    class="  btn  btn-lg col-2">5 </button>
-                            </div>
+                <!-- First column -->
+                <div class="col-4">
+                    <!-- First row of buttons -->
+                    <div class="row">
+                        <div class="col-2 mb-2">
+                            <button type="button" id="UFC_3"
+                                class="  btn btn-CDU btn-sm btn-primary">
+                                1 SYS</button>
                         </div>
-
-                        <div class="col-12">
-
-                            <div class="row align-items-start col-12">
-                                <div class="btn-group col">
-                                    <div class="row align-items-center col-12">
-
-                                        <button id='button6' type="button"
-                                            class="  btn  btn-lg col">1
-                                        </button>
-
-                                        <button id='button7' type="button"
-                                            class="  btn  btn-lg col">2
-                                        </button>
-
-                                        <button id='button8' type="button"
-                                            class="  btn  btn-lg col">3
-                                        </button>
-
-                                        <button id='button9' type="button"
-                                            class="  btn  btn-lg col">4
-                                        </button>
-
-                                        <button id='button10' type="button"
-                                            class="  btn  btn-lg col">5
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="col-9">
-                                    <img src="{{ url_for('video_feed1') }}"
-                                        class="img-fluid col-12 "
-                                        alt="First video feed">
-                                </div>
-
-                                <div class="btn-group col">
-                                    <div class="row align-items-center col-12">
-
-                                        <button id='button11' type="button"
-                                            class="  btn  btn-lg col">1
-                                        </button>
-
-                                        <button id='button12' type="button"
-                                            class="  btn  btn-lg col">2
-                                        </button>
-
-                                        <button id='button13' type="button"
-                                            class="  btn  btn-lg col">3
-                                        </button>
-
-                                        <button id='button14' type="button"
-                                            class="  btn  btn-lg col">4
-                                        </button>
-
-                                        <button id='button15' type="button"
-                                            class="  btn  btn-lg col">5
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <!-- Buttons near the edges of the first stream -->
-
-                            </div>
-
+                        <div class="col-2 mb-2">
+                            <button type="button" id="UFC_4"
+                                class="  btn btn-CDU btn-sm btn-primary">
+                                2 NAV</button>
                         </div>
-                        <div class="btn-group col-12">
-                            <div class="col align-items-center col-12">
-                                <button id='button16' type="button"
-                                    class="  btn  btn-lg col-2">1 </button>
-                                <button id='button17' type="button"
-                                    class="  btn  btn-lg col-2">2 </button>
-                                <button id='button18' type="button"
-                                    class="  btn  btn-lg col-2">3 </button>
-                                <button id='button19' type="button"
-                                    class="  btn  btn-lg col-2">4 </button>
-                                <button id='button20' type="button"
-                                    class="  btn  btn-lg col-2">5 </button>
-                            </div>
+                        <div class="col-2 mb-2">
+                            <button type="button" id="UFC_5"
+                                class="  btn btn-CDU btn-sm btn-primary">
+                                3 WP</button>
                         </div>
-
+                        <div class="col-2 mb-2">
+                            <button type="button" id="UFC_6"
+                                class="  btn btn-CDU btn-sm btn-primary">HACK
+                                POS</button>
+                        </div>
+                        <div class="col-2 mb-2">
+                            <button type="button" id="UFC_7"
+                                class="  btn btn-CDU btn-sm btn-primary">FUNC</button>
+                        </div>
+                        <div class="col-2 mb-2">
+                            <button type="button" id="UFC_8"
+                                class="  btn btn-CDU btn-sm btn-primary">ENT
+                            </button>
+                        </div>
                     </div>
-
-                    <div class="col-6">
-
-                        <div class="btn-group col-12">
-                            <div class="col align-items-center col-12">
-                                <button id='button21' type="button"
-                                    class="  btn  btn-lg col-2">1 </button>
-                                <button id='button22' type="button"
-                                    class="  btn  btn-lg col-2">2 </button>
-                                <button id='button23' type="button"
-                                    class="  btn  btn-lg col-2">3 </button>
-                                <button id='button24' type="button"
-                                    class="  btn  btn-lg col-2">4 </button>
-                                <button id='button25' type="button"
-                                    class="  btn  btn-lg col-2">5 </button>
-                            </div>
+                    <!-- Second row of buttons -->
+                    <div class="row">
+                        <div class="col-2 mb-2">
+                            <button type="button" id="UFC_9"
+                                class="  btn btn-CDU btn-sm btn-primary">4 OSET
+                            </button>
                         </div>
-
-                        <div class="col-12">
-
-                            <div class="row align-items-start col-12">
-                                <div class="btn-group col">
-                                    <div class="row align-items-center col-12">
-
-                                        <button id='button26' type="button"
-                                            class="  btn  btn-lg col">1
-                                        </button>
-
-                                        <button id='button27' type="button"
-                                            class="  btn  btn-lg col">2
-                                        </button>
-
-                                        <button id='button28' type="button"
-                                            class="  btn  btn-lg col">3
-                                        </button>
-
-                                        <button id='button29' type="button"
-                                            class="  btn  btn-lg col">4
-                                        </button>
-
-                                        <button id='button30' type="button"
-                                            class="  btn  btn-lg col">5
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="col-9">
-                                    <img src="{{ url_for('video_feed1') }}"
-                                        class="img-fluid col-12 "
-                                        alt="First video feed">
-                                </div>
-
-                                <div class="btn-group col">
-                                    <div class="row align-items-center col-12">
-
-                                        <button id='button31' type="button"
-                                            class="  btn  btn-lg col">1
-                                        </button>
-
-                                        <button id='button32' type="button"
-                                            class="  btn  btn-lg col">2
-                                        </button>
-
-                                        <button id='button33' type="button"
-                                            class="  btn  btn-lg col">3
-                                        </button>
-
-                                        <button id='button34' type="button"
-                                            class="  btn  btn-lg col">4
-                                        </button>
-
-                                        <button id='button35' type="button"
-                                            class="  btn  btn-lg col">5
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <!-- Buttons near the edges of the first stream -->
-
-                            </div>
-
+                        <div class="col-2 mb-2">
+                            <button type="button" id="UFC_10"
+                                class="  btn btn-CDU btn-sm btn-primary">
+                                5 FPM</button>
                         </div>
-                        <div class="btn-group col-12">
-                            <div class="col align-items-center col-12">
-                                <button id='button36' type="button"
-                                    class="  btn  btn-lg col-2">1 </button>
-                                <button id='button37' type="button"
-                                    class="  btn  btn-lg col-2">2 </button>
-                                <button id='button38' type="button"
-                                    class="  btn  btn-lg col-2">3 </button>
-                                <button id='button39' type="button"
-                                    class="  btn  btn-lg col-2">4 </button>
-                                <button id='button40' type="button"
-                                    class="  btn  btn-lg col-2">5 </button>
-                            </div>
+                        <div class="col-2 mb-2">
+                            <button type="button" id="UFC_11"
+                                class="  btn btn-CDU btn-sm btn-primary">6
+                                PREV</button>
                         </div>
-
+                        <div class="col-2 mb-2">
+                            <button type="button" id="UFC_12"
+                                class="  btn btn-CDU btn-sm btn-primary">0
+                                STEER</button>
+                        </div>
+                        <div class="col-2 mb-2">
+                            <button type="button" id="UFC_13"
+                                class="  btn btn-CDU btn-sm btn-primary">LTR</button>
+                        </div>
+                        <div class="col-2 mb-2">
+                            <button type="button" id="UFC_14"
+                                class="  btn btn-CDU btn-sm btn-primary">MK
+                                UPDT</button>
+                        </div>
+                    </div>
+                    <!-- Third row of buttons -->
+                    <div class="row">
+                        <div class="col-2 mb-2">
+                            <button type="button" id="UFC_15"
+                                class="  btn btn-CDU btn-sm btn-primary">7
+                                FPLAN</button>
+                        </div>
+                        <div class="col-2 mb-2">
+                            <button type="button" id="UFC_16"
+                                class="  btn btn-CDU btn-sm btn-primary">8
+                                MARK</button>
+                        </div>
+                        <div class="col-2 mb-2">
+                            <button type="button" id="UFC_17"
+                                class="  btn btn-CDU btn-sm btn-primary">9
+                                MSN</button>
+                        </div>
+                        <div class="col-2 mb-2">
+                            <button type="button" id="UFC_18"
+                                class="  btn btn-CDU btn-sm btn-primary">SPC
+                                WAYPT</button>
+                        </div>
+                        <div class="col-2 mb-2">
+                            <button type="button" id="UFC_19"
+                                class="  btn btn-CDU btn-sm btn-primary">CLR
+                                MALF</button>
+                        </div>
+                        <div class="col-2 mb-2">
+                            <button type="button" id="UFC_20"
+                                class="  btn btn-CDU btn-sm btn-primary">ALT
+                                ALRT</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second column -->
+                <div class="col-3">
+                    <!-- Repeat the same structure for the second column -->
+                    <!-- First row of buttons -->
+                    <div class="row">
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                    <!-- Second row of buttons -->
+                    <div class="row">
+                        <div class="col-3 mb-2">
+                            <button type="button" id="UFC_21"
+                                class="  btn btn-CDU btn-sm btn-primary">COM
+                                1</button>
+                        </div>
+                        <div class="col-3 mb-2">
+                            <button type="button" id="UFC_22"
+                                class="  btn btn-CDU btn-sm btn-primary">COM
+                                SEC</button>
+                        </div>
+                        <div class="col-3 mb-2">
+                            <button type="button" id="UFC_23"
+                                class="  btn btn-CDU btn-sm btn-primary">IFF</button>
+                        </div>
+                    </div>
+                    <!-- Third row of buttons -->
+                    <div class="row">
+                        <div class="col-3 mb-2">
+                            <button type="button" id="UFC_24"
+                                class="  btn btn-CDU btn-sm btn-primary">COM
+                                2</button>
+                        </div>
+                        <div class="col-3 mb-2">
+                            <button type="button" id="UFC_25"
+                                class="  btn btn-CDU btn-sm btn-primary">ECCM</button>
+                        </div>
+                        <div class="col-3 mb-2">
+                            <button type="button" id="UFC_26"
+                                class="  btn btn-CDU btn-sm btn-primary">IDM
+                                R/T</button>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Bootstrap Bundle with Popper -->
-                <script
-                    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+                <div class="col-3">
+                    <div class="row">
+                        <div class="col-3 ">
+                            <button type="button" id="UFC_27"
+                                class="  btn btn-CDU btn-sm btn-primary">DATA
+                                +</button>
 
-                <script>
+                        </div>
+                        <div class="col-3">
+                            <button type="button" id="UFC_28"
+                                class="  btn btn-CDU btn-sm btn-primary">SEL
+                                +</button>
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <button type="button" id="UFC_29"
+                                class="  btn btn-CDU btn-sm btn-primary">DATA
+                                -</button>
+
+                        </div>
+                        <div class="col-3 ">
+                            <button type="button" id="UFC_30"
+                                class="  btn btn-CDU btn-sm btn-primary">SEL
+                                -</button>
+
+                        </div>
+                        <div class="col-2 ">
+                            DEPR
+                            <button type="button" id="UFC_31"
+                                class="  btn btn-CDU btn-sm btn-primary">+</button>
+                            <button type="button" id="UFC_32"
+                                class="  btn btn-CDU btn-sm btn-primary">-</button>
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-2 ">
+
+                        </div>
+                        <div class="col-4 ">
+                            INTEN
+                            <div class="row">
+                                <div class="col-6 ">
+
+                                    <button type="button" id="UFC_33"
+                                        class="  btn btn-CDU btn-sm btn-primary"><</button>
+
+                                </div>
+                                <div class="col-6">
+
+                                    <button type="button" id="UFC_34"
+                                        class="  btn btn-CDU btn-sm btn-primary">></button>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- MFD's -->
+    <div class="container">
+        <div class="row align-items-start">
+            <div class="col-6 mfd">
+
+                <div class="btn-group col-12">
+                    <div class="col align-items-center col-12">
+                        <button id='button1' type="button"
+                            class="  btn  btn-lg col-2">1 </button>
+                        <button id='button2' type="button"
+                            class="  btn  btn-lg col-2">2 </button>
+                        <button id='button3' type="button"
+                            class="  btn  btn-lg col-2">3 </button>
+                        <button id='button4' type="button"
+                            class="  btn  btn-lg col-2">4 </button>
+                        <button id='button5' type="button"
+                            class="  btn  btn-lg col-2">5 </button>
+                    </div>
+                </div>
+
+                <div class="col-12">
+
+                    <div class="row align-items-start col-12">
+                        <div class="btn-group col">
+                            <div class="row align-items-center col-12">
+
+                                <button id='button6' type="button"
+                                    class="   btn btn-CDU  btn-lg col">1
+                                </button>
+
+                                <button id='button7' type="button"
+                                    class="   btn btn-CDU  btn-lg col">2
+                                </button>
+
+                                <button id='button8' type="button"
+                                    class="   btn btn-CDU  btn-lg col">3
+                                </button>
+
+                                <button id='button9' type="button"
+                                    class="   btn btn-CDU  btn-lg col">4
+                                </button>
+
+                                <button id='button10' type="button"
+                                    class="   btn btn-CDU  btn-lg col">5
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="col-9">
+                            <img src="{{ url_for('video_feed1') }}"
+                                class="img-fluid col-12 "
+                                alt="First video feed">
+                        </div>
+
+                        <div class="btn-group col">
+                            <div class="row align-items-center col-12">
+
+                                <button id='button11' type="button"
+                                    class="   btn btn-CDU  btn-lg col">1
+                                </button>
+
+                                <button id='button12' type="button"
+                                    class="   btn btn-CDU  btn-lg col">2
+                                </button>
+
+                                <button id='button13' type="button"
+                                    class="   btn btn-CDU  btn-lg col">3
+                                </button>
+
+                                <button id='button14' type="button"
+                                    class="   btn btn-CDU  btn-lg col">4
+                                </button>
+
+                                <button id='button15' type="button"
+                                    class="   btn btn-CDU  btn-lg col">5
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Buttons near the edges of the first stream -->
+
+                    </div>
+
+                </div>
+                <div class="btn-group col-12">
+                    <div class="col align-items-center col-12">
+                        <button id='button16' type="button"
+                            class="  btn  btn-lg col-2">1 </button>
+                        <button id='button17' type="button"
+                            class="  btn  btn-lg col-2">2 </button>
+                        <button id='button18' type="button"
+                            class="  btn  btn-lg col-2">3 </button>
+                        <button id='button19' type="button"
+                            class="  btn  btn-lg col-2">4 </button>
+                        <button id='button20' type="button"
+                            class="  btn  btn-lg col-2">5 </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-6 mfd">
+
+                <div class="btn-group col-12">
+                    <div class="col align-items-center col-12">
+                        <button id='button21' type="button"
+                            class="  btn  btn-lg col-2">1 </button>
+                        <button id='button22' type="button"
+                            class="  btn  btn-lg col-2">2 </button>
+                        <button id='button23' type="button"
+                            class="  btn  btn-lg col-2">3 </button>
+                        <button id='button24' type="button"
+                            class="  btn  btn-lg col-2">4 </button>
+                        <button id='button25' type="button"
+                            class="  btn  btn-lg col-2">5 </button>
+                    </div>
+                </div>
+
+                <div class="col-12">
+
+                    <div class="row align-items-start col-12">
+                        <div class="btn-group col">
+                            <div class="row align-items-center col-12">
+
+                                <button id='button26' type="button"
+                                    class="   btn btn-CDU  btn-lg col">1
+                                </button>
+
+                                <button id='button27' type="button"
+                                    class="   btn btn-CDU  btn-lg col">2
+                                </button>
+
+                                <button id='button28' type="button"
+                                    class="   btn btn-CDU  btn-lg col">3
+                                </button>
+
+                                <button id='button29' type="button"
+                                    class="   btn btn-CDU  btn-lg col">4
+                                </button>
+
+                                <button id='button30' type="button"
+                                    class="   btn btn-CDU  btn-lg col">5
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="col-9">
+                            <img src="{{ url_for('video_feed2') }}"
+                                class="img-fluid col-12 "
+                                alt="First video feed">
+                        </div>
+
+                        <div class="btn-group col">
+                            <div class="row align-items-center col-12">
+
+                                <button id='button31' type="button"
+                                    class="   btn btn-CDU  btn-lg col">1
+                                </button>
+
+                                <button id='button32' type="button"
+                                    class="   btn btn-CDU  btn-lg col">2
+                                </button>
+
+                                <button id='button33' type="button"
+                                    class="   btn btn-CDU  btn-lg col">3
+                                </button>
+
+                                <button id='button34' type="button"
+                                    class="   btn btn-CDU  btn-lg col">4
+                                </button>
+
+                                <button id='button35' type="button"
+                                    class="   btn btn-CDU  btn-lg col">5
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Buttons near the edges of the first stream -->
+
+                    </div>
+
+                </div>
+                <div class="btn-group col-12">
+                    <div class="col align-items-center col-12">
+                        <button id='button36' type="button"
+                            class="  btn  btn-lg col-2">1 </button>
+                        <button id='button37' type="button"
+                            class="  btn  btn-lg col-2">2 </button>
+                        <button id='button38' type="button"
+                            class="  btn  btn-lg col-2">3 </button>
+                        <button id='button39' type="button"
+                            class="  btn  btn-lg col-2">4 </button>
+                        <button id='button40' type="button"
+                            class="  btn  btn-lg col-2">5 </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Bootstrap Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
         // Add event listeners to buttons for the first stream
 for (let i = 1; i <= 20; i++) {
     document.getElementById('button' + i).addEventListener('click', function() {
@@ -296,6 +512,166 @@ for (let i = 21; i <= 40; i++) {
         simulateShift1AndSendToServer('button' + i);
     });
 }
+
+
+for (let i = 1; i <= 36; i++) {
+    document.getElementById('UFC_' + i).addEventListener('click', function() {
+        CDUToServer('UFC_' + i);
+    });
+}
+
+
+
+
+async function CDUToServer(id) {
+     let key, keyCode;
+switch (id) {
+        case 'UFC_21':
+        case 'UFC_1' :
+            key = '1';
+            keyCode = 49;
+            break;
+
+        case 'UFC_22':
+        case 'UFC_2':
+        key = '2';
+        keyCode = 50;
+        break;
+        case 'UFC_23':
+        case 'UFC_3':
+            key = '3';
+            keyCode = 51;
+            break;
+        case 'UFC_24':
+        case 'UFC_4':
+            key = '4';
+            keyCode = 52;
+            break;
+        case 'UFC_25':
+        case 'UFC_5':
+            key = '5';
+            keyCode = 53;
+            break;
+        case 'UFC_26':
+        case 'UFC_6':
+            key = '6';
+            keyCode = 54;
+            break;
+        case 'UFC_27':
+        case 'UFC_7':
+            key = '7';
+            keyCode = 55;
+            break;
+        case 'UFC_28':
+        case 'UFC_8':
+            key = '8';
+            keyCode = 56;
+            break;
+        case 'UFC_29':
+        case 'UFC_9':
+            key = '9';
+            keyCode = 57;
+            break;
+        case 'UFC_30':
+        case 'UFC_10':
+            key = '0';
+            keyCode = 48;
+            break;
+        case 'UFC_31':
+        case 'UFC_11':
+            key = 'a';
+            keyCode = 65;
+            break;
+        case 'UFC_32':
+        case 'UFC_12':
+            key = 'b';
+            keyCode = 66;
+            break;
+        case 'UFC_33':
+        case 'UFC_13':
+            key = 'c';
+            keyCode = 67;
+            break;
+        case 'UFC_34':
+        case 'UFC_14':
+            key = 'd';
+            keyCode = 68;
+            break;
+        case 'UFC_35':
+        case 'UFC_15':
+            key = 'e';
+            keyCode = 69;
+            break;
+        case 'UFC_36':
+        case 'UFC_16':
+            key = 'f';
+            keyCode = 70;
+            break;
+        case 'UFC_37':
+        case 'UFC_17':
+            key = 'g';
+            keyCode = 71;
+            break;
+        case 'UFC_38':
+        case 'UFC_18':
+            key = 'h';
+            keyCode = 72;
+            break;
+        case 'UFC_39':
+        case 'UFC_19':
+            key = 'i';
+            keyCode = 73;
+            break;
+        case 'UFC_40':
+        case 'UFC_20':
+            key = 'j';
+            keyCode = 74;
+            break;
+        default:
+            // Handle default case
+            console.error('Invalid button ID:', id);
+            return;
+    }
+
+        const buttonNumber = parseInt(id.replace('UFC_', ''));
+
+    // Determine key and keyCode based on button number
+    if (buttonNumber > 20) {
+        // Send Ctrl key
+        key = 'alt_'+key;
+        keyCode = 17; // Key code for 'Ctrl' key
+    } else {
+        // Send Shift key
+        key = 'shift_ctrl_'+key;
+        keyCode = 16; // Key code for 'Shift' key
+    }
+   // Create KeyboardEvent
+    const event = new KeyboardEvent('keydown', {
+        key: key,
+        keyCode: keyCode
+    });
+
+
+            // Simulate Shift+1 locally
+            document.dispatchEvent(event);
+
+            // Send the command to the server
+            fetch('/send-keyboard-shortcut', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    shortcut: key
+                }) // Send the shortcut information@!&*
+            }).then(response => {
+                // Handle response from server if needed
+                console.log('Shortcut sent to server');
+            }).catch(error => {
+                console.error('Error sending shortcut to server:', error);
+            });
+        }
+
         // Function to simulate Shift+1 and send to server
  async function simulateShift1AndSendToServer(id) {
     let key, keyCode;
@@ -448,6 +824,6 @@ for (let i = 21; i <= 40; i++) {
             });
         }
     </script>
-            </body>
+    </body>
 
-        </html>
+</html>
